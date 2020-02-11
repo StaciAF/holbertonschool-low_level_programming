@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * main - check the code for Holberton School students.
  *
@@ -7,7 +6,7 @@
  */
 int main(void)
 {
-	char c[10] = "Holberton";
+	char c[9] = "Holberton";
 
 	int i = 0;
 
