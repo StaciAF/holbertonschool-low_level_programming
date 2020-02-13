@@ -1,11 +1,6 @@
 #include "holberton.h"
 /**
 * times_table - prints the 9 times table
-*@side: takes column input
-*
-*@top: takes row input
-*
-*@x: takes int
 *
 * Description - starts with 0 prints 9 times table
 * Return: in main function
