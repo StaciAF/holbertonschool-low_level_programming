@@ -5,14 +5,13 @@
 * Description: prints 0 to 14 ten times
 * Return: in main
 */
-
 void more_numbers(void)
 {
 	int n;
 	int j = 0;
 
 
-	while (j <= 10)
+	while (j <= 9)
 	{
 		j++;
 	for (n = 0; n <= 14; n++)
