@@ -2,6 +2,7 @@
 #include "holberton.h"
 /**
 * print_to_98 - prints all natural numbers from n to 98
+*@n: number to be input
 *
 * Description: adds new line to printed numbers
 */
