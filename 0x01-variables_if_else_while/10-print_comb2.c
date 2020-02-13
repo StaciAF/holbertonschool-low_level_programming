@@ -10,17 +10,14 @@ int main(void)
 
 	for (x = 0; x <= 99; x++)
 	{
-	putchar((x / 10) + '0');
-	putchar((x % 10) + '0');
-	putchar(44);
-}
-	if (x != 99)
+		putchar((x / 10) + '0');
+		putchar((x % 10) + '0');
+	if (x == 99)
 	{
-	putchar(32);
+		putchar(10);
 	}
-	else
-	{
-	putchar(10);
+	putchar(44);
+	putchar(32);
 	}
 	return (0);
 }
