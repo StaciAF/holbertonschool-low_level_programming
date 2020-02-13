@@ -14,7 +14,8 @@ int main(void)
 		putchar((x % 10) + '0');
 	if (x == 99)
 	{
-		putchar(10);
+       	putchar(32);
+	putchar(10);
 	}
 	putchar(44);
 	putchar(32);
