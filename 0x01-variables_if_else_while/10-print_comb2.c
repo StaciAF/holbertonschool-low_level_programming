@@ -16,6 +16,7 @@ int main(void)
 	{
 	putchar(10);
 	}
+	else if (x <= 98)
 	putchar(44);
 	putchar(32);
 	}
