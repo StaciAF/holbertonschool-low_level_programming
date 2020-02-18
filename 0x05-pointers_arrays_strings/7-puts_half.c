@@ -16,32 +16,18 @@ void puts_half(char *str)
 	{
 		sl++;
 	}
-	for (c = 0; c < sl; c++)
+
+	if (sl % 2 == 0)
 	{
-		if (c % 2 == 0)
-		{
-			if (c < sl / 2)
-			{
-				;
-			}
-			else
-			{
-				_putchar(str[c]);
-			}
-		}
-		else
-		{
-			if (c < (sl + 1) / 2)
-			{
-				;
-			}
-			else
-			{
-				_putchar(str[c]);
-			}
-		}
+		c = sl / 2;
 	}
+	else
+c = sl - ((sl - 1) / 2);
+
+while (c < sl)
+{
+	_putchar(str[c]);
+	c++;
+}
 	_putchar('\n');
-
-
 }
