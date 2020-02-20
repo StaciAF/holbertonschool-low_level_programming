@@ -6,22 +6,22 @@
 * Description: prints a string in reverse, followed by new line
 * Return: in main
 */
-
 void rev_string(char *s)
 {
-	char end = s[10];
-	char begin = s[0];
-	int i;
-	char ch;
+	int i, size, start, end  = 0;
+	char holder;
 
-for (i = 10 - 1; i >= 0; i--)
-	end++;
-for (i = 0; i < 10 / 2; i++)
-{
-	ch = end;
-	end = begin;
-	begin = ch;
-	begin++;
-	end++;
-}
+	for (i = 0; s[i] != 0; i++)
+	{
+		size++;
+	}
+	end = size - 1;
+	for (start = 0; start < (size / 2); start++)
+	{
+		holder = s[start];
+		s[start] = s[end];
+		s[end] = holder;
+		end--;
+
+	}
 }
