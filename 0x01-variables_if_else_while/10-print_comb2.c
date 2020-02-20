@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  *
@@ -13,13 +12,10 @@ int main(void)
 	{
 		putchar((x / 10) + '0');
 		putchar((x % 10) + '0');
-	if (x == 99)
-	{
-	putchar(10);
-	}
-	else if (x <= 98)
+	if (x <= 98)
 	putchar(44);
 	putchar(32);
 	}
+	putchar(10);
 	return (0);
 }
