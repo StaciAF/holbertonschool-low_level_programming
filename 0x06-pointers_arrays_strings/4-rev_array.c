@@ -12,19 +12,15 @@
 void reverse_array(int *a, int n)
 {
 	int start = 0;
-	int end;
+	int end = n - 1;
 	int holder;
-	int size = 0;
 
-	while (a[start] > n)
-	{
-		for (start = 0; start < (size / 2); start++)
+	for (start = 0; start < end; start++)
 	{
 		holder = a[start];
 		a[start] = a[end];
 		a[end] = holder;
 		end--;
-	}
 	}
 
 
