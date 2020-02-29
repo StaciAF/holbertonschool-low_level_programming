@@ -2,25 +2,25 @@
 #include <stdlib.h>
 
 /**
- * main - multiplies two numbers
+ * main - adds two numbers
  * @argc: argument counter
  *
  * @argv: array of arguments
  *
- * Description: performs muliplication on two input numbers
- *
+ * Description: performs addition with input numbers
+ * Return: 0 is success
  */
-int main (int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int counter;
 
-	if(argc == 1)
+	if (argc == 1)
 	{
 		printf("Error\n");
 		return (0);
 	}
-	for(counter = 1; argv[counter] != NULL; ++counter)
+	for (counter = 1; argv[counter] != NULL; ++counter)
 	{
 		sum += atoi(argv[counter]);
 	}
