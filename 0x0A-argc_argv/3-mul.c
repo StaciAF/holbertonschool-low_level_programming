@@ -8,14 +8,14 @@
  * @argv: array of arguments
  *
  * Description: performs muliplication on two input numbers
- *
+ * Return: 0 for success
  */
-int main (int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int a = 0;
 	int b = 0;
 
-	if(argc != 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
