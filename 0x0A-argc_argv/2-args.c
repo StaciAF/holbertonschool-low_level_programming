@@ -1,14 +1,15 @@
 #include <stdio.h>
 /**
- * main - prints arguments
+ * main - prints arguments passed
  * @argc: argument counter
  *
  * @argv: array of arguments
  *
  * Description: prints all arguments received
- *
+ * Return: 0 for success
  */
-int main (int argc __attribute__ ((unused)), char* argv[])
+
+int main(int argc, char *argv[])
 {
 	int i;
 
