@@ -2,22 +2,6 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * is_num - determines if a string is a number
- * @s: pointer to a string
- *
- * Return: 1 if number, 0 if not
- */
-int is_num(char *s)
-{
-	while (*s != '\0')
-	{
-		if (*s > '9' || *s < '0')
-			return (0);
-		 s++;
-	}
-	return (1);
-}
-/**
  * main - adds two numbers
  * @argc: argument counter
  *
@@ -29,7 +13,7 @@ int is_num(char *s)
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int counter;
+	int counter = 0;
 
 	if (argc == 1)
 	{
@@ -38,13 +22,12 @@ int main(int argc, char *argv[])
 	}
 	for (counter = 1; counter < argc; counter++)
 	{
-		if (is_num(argv[counter]))
-			sum += atoi(argv[counter]);
-		else
+		if (!atoi(argv[counter]))
 		{
 			printf("Error\n");
 			return (1);
 		}
+		sum += atoi(argv[counter]);
 	}
 	printf("%d\n", sum);
 	return (0);
