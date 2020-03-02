@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<ctype.h>
 
 /**
  * main - adds two numbers
@@ -13,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int counter;
+	int counter, count;
 
 	if (argc < 1)
 	{
@@ -21,12 +22,15 @@ int main(int argc, char *argv[])
 	}
 	for (counter = 1; counter < argc; counter++)
 	{
-		if (!atoi(argv[counter]))
+	sum += atoi(argv[counter]);
+	for (count = 0; argv[counter][count] != '\0'; count++)
+	{
+		if (!(isdigit(argv[counter][count])))
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum += atoi(argv[counter]);
+	}
 	}
 	printf("%d\n", sum);
 	return (0);
