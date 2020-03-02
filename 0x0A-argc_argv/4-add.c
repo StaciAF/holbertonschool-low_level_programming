@@ -7,16 +7,15 @@
  *
  * Return: 1 if number, 0 if not
  */
-
 int is_num(char *s)
 {
 	while (*s != '\0')
 	{
-		if ((*s > '9') || (*s < '0'))
-			 return (0);
+		if (*s > '9' || *s < '0')
+			return (0);
 		 s++;
 	}
-	 return (1);
+	return (1);
 }
 /**
  * main - adds two numbers
