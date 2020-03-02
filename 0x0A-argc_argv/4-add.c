@@ -15,10 +15,9 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	int counter;
 
-	if (argc == 1)
+	if (argc < 1)
 	{
 		printf("0\n");
-		return (0);
 	}
 	for (counter = 1; counter < argc; counter++)
 	{
