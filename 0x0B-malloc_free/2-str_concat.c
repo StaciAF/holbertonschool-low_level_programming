@@ -46,6 +46,11 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (j = 0; s2[j]; j++, i++)
 	{
+		if (s2 == NULL)
+		{
+			s2[i] = ' ';
+		}
+
 		ptr3[i] = s2[j];
 	}
 	ptr3[i] = '\0';
