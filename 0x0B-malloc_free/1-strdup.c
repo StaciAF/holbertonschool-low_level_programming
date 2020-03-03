@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strdup - returns a pointer with malloc with a copy of given string
  * @str: given string to be copied
@@ -31,5 +32,5 @@ char *_strdup(char *str)
 		c[i] = str[i];
 	}
 		c[i] = '\0';
-	return (c);
+		return (c);
 }
