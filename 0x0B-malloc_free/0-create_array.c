@@ -4,6 +4,8 @@
  * create_array - creates an array of chars
  * @c: initialize array with this char
  *
+ * @size: size of array to be copied
+ *
  * Description: creates an array of char then initializes it with given char
  * Return: NULL if size 0 or failure otherwise return pointer to array
  */
