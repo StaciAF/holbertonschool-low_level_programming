@@ -40,11 +40,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		ptr3[i] = s1[i];
 	}
-	for (j = 0; s2[j] != ' '; j++, i++)
+	for (j = 0; s2[j]; j++, i++)
 	{
 		ptr3[i] = s2[j];
 	}
 	ptr3[i] = '\0';
-	return(ptr3);
-
+	return (ptr3);
 }
