@@ -1,8 +1,7 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 /**
- * _stardup - returns a pointer with malloc with a copy of given string
+ * _strdup - returns a pointer with malloc with a copy of given string
  * @str: given string to be copied
  *
  * Description: returns a pointer with malloc with a copy of given string
