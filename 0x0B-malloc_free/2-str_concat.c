@@ -37,10 +37,12 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		s1 = "";
+		return (NULL);
 	}
 	if (s2 == NULL)
 	{
 		s2 = "";
+		return (NULL);
 	}
 	ptr3 = malloc(sizeof(char) * (len1 + len2 + 1));
 
