@@ -27,8 +27,8 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int len1, len2;
-	int i, j;
+	unsigned int len1, len2;
+	unsigned int i, j;
 	char *ptr3;
 
 	len1 = _strlen(s1);
