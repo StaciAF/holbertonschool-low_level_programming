@@ -44,7 +44,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s1 == NULL)
 		{
-			s1[i] = ' ';
+			s1 = "";
 		}
 		ptr3[i] = s1[i];
 	}
@@ -52,7 +52,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s2 == NULL)
 		{
-			s2[i] = ' ';
+			s2 = "";
 		}
 
 		ptr3[i] = s2[j];
