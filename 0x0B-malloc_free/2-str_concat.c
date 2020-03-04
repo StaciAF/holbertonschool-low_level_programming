@@ -30,7 +30,6 @@ char *str_concat(char *s1, char *s2)
 	unsigned int len1, len2;
 	unsigned int i, j;
 	char *ptr3;
-	char ptr3L;
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
@@ -39,8 +38,7 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	ptr3L = (len1 + len2 + 1);
-	ptr3 = malloc(sizeof(ptr3L));
+	ptr3 = malloc(sizeof(len1 + len2 +1));
 
 	if (ptr3 == NULL)
 	{
