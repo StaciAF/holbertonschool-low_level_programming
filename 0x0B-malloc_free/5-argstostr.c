@@ -37,17 +37,18 @@ char *argstostr(int ac, char **av)
 	{
 		len += _strlen(av[i]);
 	}
-	array = malloc(len * sizeof(char));
+
+	array = malloc(sizeof(char) * len + 1);
 	if (array == NULL)
 	{
 		return (NULL);
 	}
+	new = 0;
 	for (n = 0; n < ac; n++)
 	{
-		for (c = 0; av[n][i] != '\0'; c++)
+		for (c = 0; av[n][c] != '\0'; c++)
 		{
-			array[new] = av[n][i];
-			new++;
+			array[new++] = av[n][c];
 		}
 		array[new] = '\n';
 	}
