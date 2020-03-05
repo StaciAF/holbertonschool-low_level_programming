@@ -22,6 +22,8 @@ int _strlen(char *s)
  *
  * @s2: second given string - behind s1
  *
+ * @n: given number of bytes to print
+ *
  * Description: concatenates two strings
  * Return: NULL for failure otherwise return pointer
  */
