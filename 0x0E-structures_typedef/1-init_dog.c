@@ -5,6 +5,8 @@
  *
  * @name: variable for dog name
  *
+ * @age: variable for dog's age
+ *
  * @owner: variable for owner's name
  *
  * Description: function initializes a struct type variable
@@ -13,7 +15,7 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if(d != '\0')
+	if (d != '\0')
 	{
 		d->name = name;
 		d->age = age;
