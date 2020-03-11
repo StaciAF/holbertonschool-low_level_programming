@@ -4,11 +4,13 @@
  *
  * @name: name to be printed
  *
- * Description: fucntion that prints a name
+ * @f: pointer to function
+ *
+ * Description: function that prints a name
  */
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (f != '\0')
-		(*f)(name);
+	if (f != '\0' || name != '\0')
+		(f)(name);
 }
