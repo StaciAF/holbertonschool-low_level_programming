@@ -8,6 +8,7 @@
  *
  * @argv: argument values
  *
+ * Return: 0 for success
  */
 
 int main(int argc, char *argv)
