@@ -3,7 +3,8 @@
 #include "function_pointers.h"
 /**
  * array_iterator - function that executes function in each array element
- * @array - given array
+ *
+ * @array: given array
  *
  * @size: size of the given array
  *
@@ -17,6 +18,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (array == NULL)
 		return;
+
 	if (action != '\0')
 	{
 		for (i = 0; i < size; i++)
