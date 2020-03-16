@@ -1,12 +1,11 @@
-.cstring
-_hello:	 .asciz "Hello, Holberton\n"
+global  _main
+	    extern  _printf
 
-	.text
-	.globl _main
+	    section .text
 _main:
-	    sub  $8, %rsp
-	    mov  $0, %rax
-	    lea  _hello(%rip), %rdi
-	    call _printf
-	    add  $8, %rsp
+	    push    message
+	    call    _printf
+	    add     esp, 4
 	    ret
+message:
+	    db  'Hello, Holberton', 14, 0
