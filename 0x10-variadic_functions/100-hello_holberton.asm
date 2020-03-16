@@ -1,11 +1,11 @@
-global  _main
-	    extern  _printf
+global _start
 
-	    section .text
-_main:
-	    push    message
-	    call    _printf
-	    add     esp, 4
-	    ret
-message:
-	    db  'Hello, Holberton', 14, 0
+	section .text
+_start:
+	    mov rax, 1
+	    mov rdi, 1
+	    mov rsi, message
+	    mov rdx, 14
+	    syscall
+section .data
+	msg db "Hello, Holberton", 10
