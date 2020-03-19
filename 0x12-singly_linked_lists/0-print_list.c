@@ -5,7 +5,8 @@
  * print_list - prints all the elements of a list_t list
  * @h: points to list - head of list to be counted
  *
- * return: number of nodes in list
+ * Description: function prints all elements
+ * Return: number of nodes in list
  */
 
 size_t print_list(const list_t *h)
