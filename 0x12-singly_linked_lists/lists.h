@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
  * struct list_s - singly linked list
