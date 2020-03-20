@@ -11,7 +11,7 @@
 main:
 	     mov rax, 0
 	     mov rdi, hello
-	     call printf
+	     call write
 
 	     mov rax, 0
 	     mov rdi, 0
