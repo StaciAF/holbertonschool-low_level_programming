@@ -1,18 +1,18 @@
-section .rodata
-msg:	    db 'Hello, Holberton', 10
-msglen:	 equ $-msg
+;   The purpose of this program is to print Hello, Holberton
 
-	section .text
-	        global _start
+	segment .data
+	 hello db "Hello, Holberton", 0xa, 0
 
-_start:
-	;;  write(1, msg, msglen)
-	        mov rdi, 1
-	        mov rsi, msg
-	        mov rdx, msglen
-	        mov rax, 1
-	        syscall
-	;;  exit(0)
-	        mov rdi, 0
-	        mov rax, 60
-	        syscall
+	segment .text
+	 extern printf
+	 extern exit
+
+	global main
+main:
+	     mov rax, 0
+	     mov rdi, hello
+	     call printf
+
+	     mov rax, 0
+	     mov rdi, 0
+	     call exit
