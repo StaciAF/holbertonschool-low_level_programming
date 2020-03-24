@@ -2,11 +2,9 @@
 
 /**
  * pop_listint - deletes head node and returns the head node's data
+ * @head: first node in linked list
  *
- *
- *
- *
- *
+ * Return: n or 0 if empty.
  */
 
 int pop_listint(listint_t **head)
