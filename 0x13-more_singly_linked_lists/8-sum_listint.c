@@ -9,7 +9,7 @@
 int sum_listint(listint_t *head)
 {
 	listint_t *temp;
-	unsigned int sum;
+	int sum;
 
 	temp = head;
 
@@ -21,6 +21,7 @@ int sum_listint(listint_t *head)
 		sum = sum + temp->n;
 		temp = temp->next;
 	}
+
 	free(temp);
 	return (sum);
 }
