@@ -9,12 +9,13 @@
 int sum_listint(listint_t *head)
 {
 	listint_t *temp;
-	int sum;
-
-	temp = head;
+	unsigned int sum;
 
 	if (head == NULL)
 		return (0);
+
+	temp = head;
+	sum = 0;
 
 	while (temp != NULL)
 	{
@@ -22,6 +23,5 @@ int sum_listint(listint_t *head)
 		temp = temp->next;
 	}
 
-	free(temp);
 	return (sum);
 }
