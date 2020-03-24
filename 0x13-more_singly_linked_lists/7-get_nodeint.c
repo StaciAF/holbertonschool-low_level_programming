@@ -32,7 +32,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 		temp = head;
 		for (i = 1; i < len - index + 1; i++)
+		{
 			temp = temp->next;
-
-	return (head);
+			return (head);
+		}
+		return (NULL);
 }
