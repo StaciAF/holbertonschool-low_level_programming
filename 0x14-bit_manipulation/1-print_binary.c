@@ -20,7 +20,7 @@ void print_binary(unsigned long int n)
 	}
 	if (num == 0)
 	{
-		printf ("0");
+		printf("0");
 		return;
 	}
 
