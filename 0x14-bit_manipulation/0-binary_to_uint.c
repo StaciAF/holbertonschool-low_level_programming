@@ -32,28 +32,3 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (result);
 }
-/**
-unsigned int binary_to_uint(const char *b)
-{
-	const char *new = b;
-	unsigned int dec_value = 0;
-	int base = 1;
-	int len;
-	int i;
-
-	if (b == NULL)
-		return (0);
-
-	for (len = 0; b;)
-		len++;
-
-	for (i = 0; i < len; i++)
-	{
-		if (b[i] != '1' && b[i] != '0')
-			return (0);
-			dec_value = decimal * 2;
-		base = base * 2;
-	}
-	return (dec_value);
-}
-*/
