@@ -15,9 +15,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int flips = 0;
 	unsigned int z;
 
-	if (m == 0 || n == 0)
-		return (0);
-
 	for (z = n ^ m; z != 0; z = z >> 1)
 	     flips = flips + (z & 1);
 	return (flips);
