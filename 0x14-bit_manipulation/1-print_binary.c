@@ -24,10 +24,10 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (cnt = 10; cnt >= 0; cnt--)
+	for (cnt = 15; cnt >= 0; cnt--)
 	{
-		result = num >> cnt;
-		if (result & 1)
+		result = n & (1 << cnt);
+		if (result)
 		{
 			printf("1");
 		}
