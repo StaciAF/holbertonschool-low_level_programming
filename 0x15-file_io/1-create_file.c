@@ -10,19 +10,20 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int thisfile;
+	int thisfile, nocontent;
 	char *buffer;
 
 	if (filename == NULL)
 		return (-1);
 
 	if (text_content == NULL)
-	{
-       thisfile = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 		return (1);
-	}
 
-       thisfile = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+thisfile = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+nocontent = write(thisfile, text_content, _strlen(text_content));
+
+if (nocontent == -1)
+	return (-1);
 
 	if (thisfile == -1)
 		return (-1);
@@ -30,6 +31,7 @@ int create_file(const char *filename, char *text_content)
 	buffer = malloc(sizeof(*text_content));
 
 	write(STDOUT_FILENO, buffer, _strlen(buffer));
+	free(buffer);
 	close(thisfile);
 	return (1);
 }
