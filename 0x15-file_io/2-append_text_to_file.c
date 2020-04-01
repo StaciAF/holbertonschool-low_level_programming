@@ -11,7 +11,7 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int thisfile;
+	int thisfile, newcontent;
 
 	if (filename == NULL)
 		return (-1);
@@ -23,9 +23,11 @@ int append_text_to_file(const char *filename, char *text_content)
 	else
 		return (-1);
 
-	write(thisfile, text_content, _strlen(text_content));
-
+	newcontent = write(thisfile, text_content, _strlen(text_content));
 	close(thisfile);
+
+	if (newcontent == -1)
+		return (-1);
 
 	return (1);
 }
