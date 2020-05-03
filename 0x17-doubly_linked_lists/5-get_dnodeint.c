@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * dnodeint_at_index - returns the indexed node in a doubly linked list
+ * get_dnodeint_at_index - returns the indexed node in a doubly linked list
  * @head: pointer to head of doubly linked list
  *
  * @index: given node index to be returned
