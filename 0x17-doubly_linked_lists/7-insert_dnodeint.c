@@ -38,7 +38,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		new_nodecity = malloc(sizeof(dlistint_t));
 		if (new_nodecity == NULL)
-				return (NULL);
+		{
+			free(new_nodecity);
+			return (NULL);
+		}
 		new_nodecity->n = n;
 		new_nodecity->next = temp->next;
 		new_nodecity->prev = temp;
