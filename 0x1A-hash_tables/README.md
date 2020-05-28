@@ -1,7 +1,7 @@
-README.md File for Project 0x1A. C - Hash tables
+# README.md File for Project 0x1A. C - Hash tables
 
 
-Learning Objectives
+## Learning Objectives
 
 
 What is a hash function
@@ -12,7 +12,7 @@ What are the advantages and drawbacks of using hash tables
 What are the most common use cases of hash tables
 
 
-Tasks
+## Tasks
 
 0. >>> ht = {} mandatory
 
