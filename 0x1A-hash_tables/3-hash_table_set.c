@@ -11,32 +11,53 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	const char *new_val = NULL;
-	hash_node_t *next = NULL;
 	hash_node_t *element = NULL;
+	hash_node_t *new_el = NULL;
 	unsigned long int i = 0;
+	const unsigned char *new_key;
 
-	i = hash_djb2(key) % ht->size;
-	element = ht->array[i];
+	new_key = (const unsigned char*) key;
+	i = hash_djb2(new_key) % ht->size;
 
-	if (key == 0)
+	if (ht == NULL)
 		return (0);
+	if (key == NULL || (strcmp(key,"") == 0))
+		return (0);
+	if (value == NULL)
+		return (0);
+	if (ht->array[i] == NULL)
+	{
+		new_el = malloc(sizeof(hash_node_t));
+		if (new_el == NULL)
+			return (0);
+		ht->array[i] = new_el;
+		new_el->key = strdup(key);
+		new_el->value = strdup(value);
+		new_el->next = NULL;
+		return(1);
+	}
+	element = ht->array[i];
 	while(element != NULL)
 	{
-		if(!strcmp(element->key, key))
+		if(strcmp(element->key, key) == 0)
 		{
-			new_val = strdup(element->value);
-			new_val = value;
+			element->value = strdup(value);
 			return (1);
 		}
 		element = element->next;
 	}
-	if ((element = malloc(sizeof(hash_table_t) + strlen(key) + 1)) == NULL)
-		return (0);
-	strcpy(element->key, key);
-	element->value = new_val;
-
-	element->next = ht->array[i];
-	ht->array[i] = element;
-	return(1);
+	element = ht->array[i];
+	while(element != NULL)
+	{
+		new_el = malloc(sizeof(hash_node_t));
+		if (new_el == NULL)
+			return (0);
+		ht->array[i] = new_el;
+		new_el->key = strdup(key);
+		new_el->value = strdup(value);
+		new_el->next = element;
+		ht->array[i] = new_el;
+		return (1);
+	}
+	return(0);
 }

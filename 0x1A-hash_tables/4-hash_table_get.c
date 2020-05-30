@@ -9,16 +9,24 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int idx = hash_djrb2(key);
-	hash_node_t *curr = NULL;
-	hash_table_t *here;
+	unsigned long int idx;
+	hash_node_t *here;
+	const unsigned char *new_key;
 
+	if (ht == NULL)
+		return (NULL);
+	if (key == NULL || (strcmp("", key) == 0))
+		return (NULL);
+	new_key = (const unsigned char*) key;
+	idx = hash_djb2(new_key) % ht->size;
 	here = ht->array[idx];
-	if (here != NULL && strcmp(here->key, key) == 0)
+	while(here != NULL)
 	{
-		return (here->value);
+		if (strcmp(here->key, key) == 0)
+		{
+			return (here->value);
+		}
 		here = here->next;
 	}
-	else
-		return (NULL);
+	return (NULL);
 }
