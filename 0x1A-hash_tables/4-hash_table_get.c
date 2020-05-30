@@ -4,7 +4,7 @@
  * hash_table_get - gets a value associate with a key
  * @ht: hash table to be searched
  * @key: key to be searched
- * Returns: value or NULL if key isn't found
+ * Return: value or NULL if key isn't found
  */
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
@@ -17,10 +17,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	if (key == NULL || (strcmp("", key) == 0))
 		return (NULL);
-	new_key = (const unsigned char*) key;
+	new_key = (const unsigned char *) key;
 	idx = hash_djb2(new_key) % ht->size;
 	here = ht->array[idx];
-	while(here != NULL)
+	while (here != NULL)
 	{
 		if (strcmp(here->key, key) == 0)
 		{
