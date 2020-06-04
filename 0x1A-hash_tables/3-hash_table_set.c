@@ -32,7 +32,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	while (element != NULL)
 	{
 		if (strcmp(element->key, key) == 0)
-		{       element->value = strdup(value);
+		{
+			free(element->value);
+			free(element);
+			element->value = strdup(value);
 			return (1);
 		}
 		element = element->next;
