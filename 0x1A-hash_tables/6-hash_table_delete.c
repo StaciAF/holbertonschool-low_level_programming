@@ -13,10 +13,11 @@ void hash_table_delete(hash_table_t *ht)
 
 	if (ht == NULL)
 		return;
+
 	for (idx = 0; idx < ht->size; idx++)
 	{
 		mover = ht->array[idx];
-		if (mover != NULL)
+		while (mover != NULL)
 		{
 			temp = mover->next;
 			if (mover->key != NULL)
