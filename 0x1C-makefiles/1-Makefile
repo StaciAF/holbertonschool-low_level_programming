@@ -1,0 +1,6 @@
+# creates Makefile with all rules and holberton as executable name
+SRC = main.c holberton.c
+CC = gcc
+
+all:
+	$(CC) $(SRC) -o holberton

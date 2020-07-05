@@ -1,0 +1,3 @@
+#create Makefile with all rules and holberton executable
+all: main.c holberton.c
+	gcc main.c holberton.c -o holberton
