@@ -1,14 +1,14 @@
 #include "search_algos.h"
 
 /**
- * linear_search - searches for a value in an array if integers
+ * binary_search - searches for a value in an array of integers
  * @array: pointer to the first element of the array we are searching
  * @size: the number of elements in the array
  * @value: the value we are searching for
  * Return: the index (int) where value is located
  */
 
-int linear_search(int *array, size_t size, int value)
+int binary_search(int *array, size_t size, int value)
 {
 	int *first;
 	size_t i;
